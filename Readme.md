@@ -5,6 +5,9 @@
 * [Default.aspx.cs](./CS/WebSite/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/WebSite/Default.aspx.vb))
 <!-- default file list end -->
 # How to keep selection in detail grids when paging master grid within SelectionCheckbox
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e2247/)**
+<!-- run online end -->
 
 
 <p>By default, the detail grid loses its selection if a user goes to another page of a master grid and comes back to the current page.<br />
