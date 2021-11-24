@@ -1,5 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Web
@@ -9,18 +8,19 @@ Imports DevExpress.Web.ASPxGridView
 
 Partial Public Class _Default
 	Inherits System.Web.UI.Page
+
 	Protected Sub ASPxGridViewDetail_Init(ByVal sender As Object, ByVal e As EventArgs)
-		Dim gridViewDetail As ASPxGridView = CType(sender, ASPxGridView)
+		Dim gridViewDetail As ASPxGridView = DirectCast(sender, ASPxGridView)
 		gridViewDetail.ID = String.Format("gv_{0}", gridViewDetail.GetMasterRowKeyValue())
 		gridViewDetail.ClientInstanceName = gridViewDetail.ID
 		gridViewDetail.JSProperties("cpName") = gridViewDetail.ID
 	End Sub
 	Protected Sub ASPxGridViewDetail_BeforePerformDataSelect(ByVal sender As Object, ByVal e As EventArgs)
-		Dim gridViewDetail As ASPxGridView = CType(sender, ASPxGridView)
+		Dim gridViewDetail As ASPxGridView = DirectCast(sender, ASPxGridView)
 		Session("CategoryID") = gridViewDetail.GetMasterRowKeyValue()
 	End Sub
 	Protected Sub ASPxGridViewDetail_DataBound(ByVal sender As Object, ByVal e As EventArgs)
-		Dim gridViewDetail As ASPxGridView = CType(sender, ASPxGridView)
+		Dim gridViewDetail As ASPxGridView = DirectCast(sender, ASPxGridView)
 		If ASPxHiddenFieldStorage.Contains(gridViewDetail.ID) Then
 			Dim keys() As Object = CType(ASPxHiddenFieldStorage(gridViewDetail.ID), Object())
 			For Each key As Object In keys

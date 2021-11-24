@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="true" CodeFile="Default.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 <%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
 	Namespace="DevExpress.Web.ASPxHiddenField" TagPrefix="dxhf" %>
 <%@ Register Assembly="DevExpress.Web.v13.1, Version=13.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
@@ -13,13 +13,13 @@
 <body>
 
 	<script type="text/javascript" language="javascript">
-		var detailGridViewName = '';
-		function SelectionChangedEventHandler(s, e) {
+	    var detailGridViewName = '';
+	    function SelectionChangedEventHandler(s, e) {
 			detailGridViewName = s.cpName;
 			s.GetSelectedFieldValues('ProductID', SaveSelection);
 		}
 		function SaveSelection(selectedKeys) {
-			HiddenFieldStorage.Set(detailGridViewName, selectedKeys);
+		    HiddenFieldStorage.Set(detailGridViewName, selectedKeys);
 		}
 	</script>
 
