@@ -13,6 +13,7 @@ Partial Public Class _Default
 		Dim gridViewDetail As ASPxGridView = CType(sender, ASPxGridView)
 		gridViewDetail.ID = String.Format("gv_{0}", gridViewDetail.GetMasterRowKeyValue())
 		gridViewDetail.ClientInstanceName = gridViewDetail.ID
+		gridViewDetail.JSProperties("cpName") = gridViewDetail.ID
 	End Sub
 	Protected Sub ASPxGridViewDetail_BeforePerformDataSelect(ByVal sender As Object, ByVal e As EventArgs)
 		Dim gridViewDetail As ASPxGridView = CType(sender, ASPxGridView)
