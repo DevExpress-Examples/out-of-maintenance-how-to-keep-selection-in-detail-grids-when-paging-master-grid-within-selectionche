@@ -15,8 +15,7 @@
 	<script type="text/javascript" language="javascript">
 	    var detailGridViewName = '';
 	    function SelectionChangedEventHandler(s, e) {
-			var detailGridViewNameParts = s.name.split('_');
-			detailGridViewName = detailGridViewNameParts[detailGridViewNameParts.length - 2] + '_' + detailGridViewNameParts[detailGridViewNameParts.length - 1];
+			detailGridViewName = s.cpName;
 			s.GetSelectedFieldValues('ProductID', SaveSelection);
 		}
 		function SaveSelection(selectedKeys) {

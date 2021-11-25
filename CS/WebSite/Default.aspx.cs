@@ -13,6 +13,7 @@ public partial class _Default : System.Web.UI.Page
 		ASPxGridView gridViewDetail = (ASPxGridView)sender;
 		gridViewDetail.ID = string.Format("gv_{0}", gridViewDetail.GetMasterRowKeyValue());
 		gridViewDetail.ClientInstanceName = gridViewDetail.ID;
+		gridViewDetail.JSProperties["cpName"] = gridViewDetail.ID;
 	}
 	protected void ASPxGridViewDetail_BeforePerformDataSelect(object sender, EventArgs e)
 	{
